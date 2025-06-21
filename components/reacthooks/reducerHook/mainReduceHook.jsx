@@ -1,8 +1,7 @@
 import React, {useReducer} from 'react';
 
-function MainReduceHook(props) {
-    const [counter,setCounter] = React.useState(0);
-    const [text, setText] = React.useState(false);
+function MainReduceHook() {
+
     const reducer=(state,action)=>{
         switch(action.type){
             case 'increment':
@@ -20,7 +19,7 @@ function MainReduceHook(props) {
             <h2>{state.count}</h2>
             <button className="btn btn-primary" onClick={()=>{dispatch({type:"increment"})
                 dispatch({type:"toggleShowText"})}}    >Click</button>
-            {text&&<p>This is a text</p>}
+            {state.showText &&<p>This is a text</p>}
         </>
     );
 }

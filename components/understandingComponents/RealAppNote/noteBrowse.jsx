@@ -1,9 +1,10 @@
 import React from 'react';
+import Header from "./Header/Header.jsx";
 
 function NoteBrowse(props) {
     return (
         <>
-        <h1>Welcome To Note Browse</h1>
+      |<Header/>
         </>
     );
 }
